@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\Variable;
+use Illuminate\Support\Facades\Request;
 
 class VariablesController extends Controller
 {    
@@ -18,7 +19,8 @@ class VariablesController extends Controller
         | example
         |
         */
-        // response()->json(Variable::all());
+        response()->json(Variable::all());
+        
     }
 
     /**
@@ -36,6 +38,16 @@ class VariablesController extends Controller
         // $row = new Variable;
         // $row->column = request()->get('column');
         // $row->delete();
+
+        $var = Variable::insert([
+            "name" => $_POST['name'],
+            "type" => $_POST['type'],
+            "created_at" => date("Y-m-d h:i:s"),
+        ]);
+        
+       
+        response()->json($var);
+
     }
 
     /**

@@ -18,7 +18,8 @@ class LogsController extends Controller
         | example
         |
         */
-        // response()->json(Log::all());
+        response()->json(Log::all());
+
     }
 
     /**
