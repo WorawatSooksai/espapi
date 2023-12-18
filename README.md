@@ -63,4 +63,8 @@ $table->increments('id');
 ///
 php leaf db:migrate
 
+-> fix if add foreign('variable_id')->references('id')->on('variables')->onDelete('cascade') error unsigned integer
+
+
+
 ## Deployment instructions
