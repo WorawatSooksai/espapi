@@ -43,8 +43,7 @@ class VariablesController extends Controller
             "name" => $_POST['name'],
             "type" => $_POST['type'],
             "created_at" => date("Y-m-d h:i:s"),
-        ]);
-        
+        ]);        
        
         response()->json($var);
 
@@ -55,7 +54,7 @@ class VariablesController extends Controller
      */
     public function show($id)
     {
-        //
+        response()->json(Variable::where('id',$id)->first()->join());        
     }
 
     /**
