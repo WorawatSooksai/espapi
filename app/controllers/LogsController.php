@@ -57,15 +57,18 @@ class LogsController extends Controller
     public function show($v_name)
     {
         $var_show = Log::where('variables.name',$v_name)
-            ->join('variables','variables.id','logs.id')
-            ->orderyBy('created_at','desc')
+            ->join('variables','variables.id','logs.variable_id')
+            ->orderBy('logs.created_at','desc')
+            ->select('logs.*','variables.name')
+            ->limit('50')
             ->get();
         response()->json($var_show);
     }
     public function last($v_name){
         $var_show = Log::where('variables.name',$v_name)
-            ->join('variables','variables.id','logs.id')
-            ->orderyBy('created_at','desc')
+            ->join('variables','variables.id','logs.variable_id')
+            ->orderBy('logs.created_at','desc')
+            ->select('variables.name','logs.*')
             ->first();
         response()->json($var_show);
 
