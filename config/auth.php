@@ -174,7 +174,7 @@ return [
     | Secret string to encode JWT
     |
     */
-    'TOKEN_SECRET' => '@_leaf$0Secret!',
+    'TOKEN_SECRET' => '662021xxx@espapi',
 
     /*
     |--------------------------------------------------------------------------

@@ -7,7 +7,7 @@ app()->get('/', function () {
 
 app()->group('/api', function () {
     $token = Authentication::getBearerToken();       
-    $user = Authentication::validate($token,"@_leaf$0Secret!");
+    $user = Authentication::validate($token,"662021xxx@espapi");
     if(empty($user)){
         response()->json(['message' => 'please use api/login to get token']);
     }else{
