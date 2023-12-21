@@ -5,6 +5,8 @@ namespace App\Controllers;
 use App\Models\Log;
 use App\Models\Variable;
 
+
+
 class LogsController extends Controller
 {    
     /**
@@ -19,7 +21,7 @@ class LogsController extends Controller
         | example
         |
         */
-        response()->json(Log::all());
+       
 
     }
 
