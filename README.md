@@ -1,8 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the application up and running.
+IoT Application Developer
+https://github.com/mahmoodfathy/IoT-Roadmap 
 
-Things you may want to cover:
+
+Backend Devoloper  
+https://godesign.pk/astounding-backend-developer-roadmap-follow-16-basics/
+
+ 
+Frontend Developer 
+https://roadmap.sh/frontend
 
 ## App Info
 
